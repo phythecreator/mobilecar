@@ -1,9 +1,26 @@
-body { margin: 0; background: #000; overflow: hidden; font-family: 'Monaco', monospace; }
-#hud { position: absolute; bottom: 40px; right: 40px; color: #fff; text-shadow: 2px 2px 4px #000; pointer-events: none; }
-.stats { text-align: right; }
-#speed { font-size: 80px; font-weight: 900; font-style: italic; }
-#gear { font-size: 50px; color: #ff3030; font-weight: bold; margin-top: -10px; }
-#rpm-bar { width: 300px; height: 10px; background: rgba(255,255,255,0.2); border: 1px solid #fff; margin-top: 10px; overflow: hidden; }
-#rpm-fill { width: 0%; height: 100%; background: linear-gradient(90deg, #fff, #ffff00, #ff0000); transition: width 0.1s; }
-#lap-timer { position: absolute; top: -750px; left: -20px; font-size: 24px; color: #00ffcc; }
-#best-lap { position: absolute; top: -720px; left: -20px; font-size: 18px; color: #aaa; }
+body, html { margin: 0; padding: 0; overflow: hidden; background: #000; font-family: 'Arial Black', sans-serif; }
+
+/* Menu Profissional */
+#overlay {
+    position: fixed; width: 100%; height: 100%; background: radial-gradient(circle, #1a1a2e 0%, #000 100%);
+    display: flex; justify-content: center; align-items: center; z-index: 100; transition: 0.8s;
+}
+#menu { text-align: center; color: white; }
+h1 { font-size: 80px; letter-spacing: -5px; margin: 0; }
+.pro { color: #ff0044; font-style: italic; }
+#start-btn {
+    padding: 20px 60px; font-size: 20px; background: #ff0044; color: white; border: none;
+    cursor: pointer; font-weight: bold; clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+    transition: 0.3s;
+}
+#start-btn:hover { background: #fff; color: #ff0044; transform: scale(1.1); }
+
+/* HUD de Jogo */
+#hud { position: absolute; width: 100%; height: 100%; pointer-events: none; }
+.top-bar { position: absolute; top: 30px; left: 30px; color: white; font-size: 24px; }
+.bottom-right { position: absolute; bottom: 40px; right: 40px; color: white; text-align: right; }
+#speed-val { font-size: 110px; line-height: 0.8; font-style: italic; }
+.unit-group { display: flex; justify-content: flex-end; align-items: baseline; gap: 10px; }
+#gear-val { font-size: 50px; color: #ff0044; }
+.rpm-gauge { width: 300px; height: 6px; background: rgba(255,255,255,0.2); margin-top: 10px; border-radius: 3px; }
+#rpm-fill { width: 0%; height: 100%; background: linear-gradient(90deg, #00ffcc, #ff0044); box-shadow: 0 0 15px #ff0044; }
