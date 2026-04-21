@@ -1,0 +1,9 @@
+body { margin: 0; background: #000; overflow: hidden; font-family: 'Monaco', monospace; }
+#hud { position: absolute; bottom: 40px; right: 40px; color: #fff; text-shadow: 2px 2px 4px #000; pointer-events: none; }
+.stats { text-align: right; }
+#speed { font-size: 80px; font-weight: 900; font-style: italic; }
+#gear { font-size: 50px; color: #ff3030; font-weight: bold; margin-top: -10px; }
+#rpm-bar { width: 300px; height: 10px; background: rgba(255,255,255,0.2); border: 1px solid #fff; margin-top: 10px; overflow: hidden; }
+#rpm-fill { width: 0%; height: 100%; background: linear-gradient(90deg, #fff, #ffff00, #ff0000); transition: width 0.1s; }
+#lap-timer { position: absolute; top: -750px; left: -20px; font-size: 24px; color: #00ffcc; }
+#best-lap { position: absolute; top: -720px; left: -20px; font-size: 18px; color: #aaa; }
