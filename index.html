@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>ApexEngine 3D - Pro Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="hud">
+        <div class="stats">
+            <div id="speed">0 <span>KM/H</span></div>
+            <div id="gear">N</div>
+            <div id="rpm-bar"><div id="rpm-fill"></div></div>
+        </div>
+        <div id="lap-timer">LAP: 00:00.000</div>
+        <div id="best-lap">BEST: --:--.---</div>
+    </div>
+    
+    <script type="importmap">
+        { "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js" } }
+    </script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
