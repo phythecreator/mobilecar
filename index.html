@@ -2,22 +2,38 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <title>ApexEngine 3D - Pro Simulator</title>
+    <title>MobileCar Pro | Phythecreator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="hud">
-        <div class="stats">
-            <div id="speed">0 <span>KM/H</span></div>
-            <div id="gear">N</div>
-            <div id="rpm-bar"><div id="rpm-fill"></div></div>
+    <!-- Ecrã de Início -->
+    <div id="overlay">
+        <div id="menu">
+            <h1>MOBILE CAR <span class="pro">PRO</span></h1>
+            <p>Simulador de Alta Performance</p>
+            <button id="start-btn">INICIAR SIMULAÇÃO</button>
+            <div class="controls-hint">WASD: Dirigir | Espaço: Travão | C: Câmara</div>
         </div>
-        <div id="lap-timer">LAP: 00:00.000</div>
-        <div id="best-lap">BEST: --:--.---</div>
     </div>
-    
+
+    <!-- Interface de Jogo (HUD) -->
+    <div id="hud" style="display: none;">
+        <div class="top-bar">
+            <div id="timer">00:00:00</div>
+            <div id="best">MELHOR: --:--</div>
+        </div>
+        <div class="bottom-right">
+            <div id="speed-val">0</div>
+            <div class="unit-group">
+                <div id="gear-val">N</div>
+                <div class="kmh">KM/H</div>
+            </div>
+            <div class="rpm-gauge"><div id="rpm-fill"></div></div>
+        </div>
+    </div>
+
     <script type="importmap">
-        { "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js" } }
+        { "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/" } }
     </script>
     <script type="module" src="main.js"></script>
 </body>
